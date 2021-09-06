@@ -28,8 +28,8 @@ class EmployeeTest {
 	@Test
 	void testEquals_AllFiledsAreSame() {
 
-		Employee emp1 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
-		Employee emp2 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp1 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp2 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 
 		assertTrue(emp1.equals(emp2));
 
@@ -40,8 +40,8 @@ class EmployeeTest {
 			"1,1,Kobayashi Taro,2001-04-02" })
 	void testEquals_OneOfTheFiledIsNotSame(long empId, String empNo, String empNm, LocalDate entryDate) {
 
-		Employee emp1 = newEmployee(empId, empNo, empNm, entryDate);
-		Employee emp2 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp1 = EmployeeTest.newEmployee(empId, empNo, empNm, entryDate);
+		Employee emp2 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 
 		assertFalse(emp1.equals(emp2));
 
@@ -50,8 +50,8 @@ class EmployeeTest {
 	@Test
 	void testHashCode_AllFiledsAreSame() {
 		Map<Employee, Long> map = new HashMap<Employee, Long>();
-		Employee emp1 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
-		Employee emp2 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp1 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp2 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 
 		map.put(emp1, Long.valueOf(1));
 		assertThat(map.get(emp2), is(Long.valueOf(1)));
@@ -64,8 +64,8 @@ class EmployeeTest {
 	void testHashCode_OneOfTheFiledIsNotSame(long empId, String empNo, String empNm, LocalDate entryDate) {
 		Map<Employee, Long> map = new HashMap<Employee, Long>();
 
-		Employee emp1 = newEmployee(empId, empNo, empNm, entryDate);
-		Employee emp2 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp1 = EmployeeTest.newEmployee(empId, empNo, empNm, entryDate);
+		Employee emp2 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 
 		map.put(emp1, Long.valueOf(1));
 		assertThat(map.get(emp2), is(Long.valueOf(1)));
@@ -78,9 +78,9 @@ class EmployeeTest {
 
 		List<Employee> employees = new ArrayList<Employee>();
 
-		Employee emp1 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
-		Employee emp2 = newEmployee(2, "2", "Kobayashi Jiro", LocalDate.of(2000, 4, 2));
-		Employee emp3 = newEmployee(3, "3", "Kobayashi Saburo", LocalDate.of(2000, 4, 3));
+		Employee emp1 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp2 = EmployeeTest.newEmployee(2, "2", "Kobayashi Jiro", LocalDate.of(2000, 4, 2));
+		Employee emp3 = EmployeeTest.newEmployee(3, "3", "Kobayashi Saburo", LocalDate.of(2000, 4, 3));
 
 		employees.add(emp3);
 		employees.add(emp1);
