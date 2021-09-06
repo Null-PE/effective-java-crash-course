@@ -23,3 +23,14 @@ git clone git@github.com:kobain-jp/effective-java-crash-course.git
 ```
 
 if junit result shows with red bar, setup is succeeded
+
+### Effective Java
+
+```
+
+Target Sections
+
+Target Sections by week
+week 1 : 10 11 12 14 16 17 49 50 58 64
+
+```
