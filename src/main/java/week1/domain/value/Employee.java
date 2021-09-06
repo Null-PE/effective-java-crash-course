@@ -30,5 +30,8 @@ public class Employee {
 
 	// TODO6 implements Comparable and pass EmployeeTest.testCompareTo_sortedByEmpId
 	// Item 14
+	
+	// TODO10 override clone to throw CloneNotSupportException when it called
+	// Item 13
 
 }

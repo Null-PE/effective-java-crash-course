@@ -2,46 +2,73 @@ package week1.domain.value;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class EmployeeTest {
 
 	@Test
 	void testToString() {
 
-		Employee emp = new Employee();
-		emp.empId = 1;
-		emp.empNo = "1";
-		emp.empNm = "Kobayashi Taro";
-		emp.entryDate = LocalDate.of(2000, 4, 1);
-
+		Employee emp = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 		assertThat(emp.toString(), is("Employee [empId=1, empNo=1, empNm=Kobayashi Taro, entryDate=2000-04-01]"));
 
 	}
 
 	@Test
-	void testEquals() {
+	void testEquals_AllFiledsAreSame() {
 
-		Employee actualEmp = new Employee();
-		actualEmp.empId = 1;
-		actualEmp.empNo = "1";
-		actualEmp.empNm = "Kobayashi Taro";
-		actualEmp.entryDate = LocalDate.of(2000, 4, 1);
+		Employee emp1 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp2 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 
-		Employee expectedEmp = new Employee();
-		expectedEmp.empId = 1;
-		expectedEmp.empNo = "1";
-		expectedEmp.empNm = "Kobayashi Taro";
-		expectedEmp.entryDate = LocalDate.of(2000, 4, 1);
+		assertTrue(emp1.equals(emp2));
 
-		assertTrue(actualEmp.equals(expectedEmp));
+	}
+
+	@ParameterizedTest
+	@CsvSource({ "2,1,Kobayashi Taro,2000-04-01", "1,2,Kobayashi Taro,2000-04-01", "1,1,Kobayashi Jiro,2000-04-01",
+			"1,1,Kobayashi Taro,2001-04-02" })
+	void testEquals_OneOfTheFiledIsNotSame(long empId, String empNo, String empNm, LocalDate entryDate) {
+
+		Employee emp1 = newEmployee(empId, empNo, empNm, entryDate);
+		Employee emp2 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+
+		assertFalse(emp1.equals(emp2));
+
+	}
+
+	@Test
+	void testHashCode_AllFiledsAreSame() {
+		Map<Employee, Long> map = new HashMap<Employee, Long>();
+		Employee emp1 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp2 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+
+		map.put(emp1, Long.valueOf(1));
+		assertThat(map.get(emp2), is(Long.valueOf(1)));
+
+	}
+
+	@ParameterizedTest
+	@CsvSource({ "2,1,Kobayashi Taro,2000-04-01", "1,2,Kobayashi Taro,2000-04-01", "1,1,Kobayashi Jiro,2000-04-01",
+			"1,1,Kobayashi Taro,2001-04-02" })
+	void testHashCode_OneOfTheFiledIsNotSame(long empId, String empNo, String empNm, LocalDate entryDate) {
+		Map<Employee, Long> map = new HashMap<Employee, Long>();
+
+		Employee emp1 = newEmployee(empId, empNo, empNm, entryDate);
+		Employee emp2 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+
+		map.put(emp1, Long.valueOf(1));
+		assertThat(map.get(emp2), is(Long.valueOf(1)));
 
 	}
 
@@ -51,23 +78,9 @@ class EmployeeTest {
 
 		List<Employee> employees = new ArrayList<Employee>();
 
-		Employee emp1 = new Employee();
-		emp1.empId = 1;
-		emp1.empNo = "1";
-		emp1.empNm = "Kobayashi Taro";
-		emp1.entryDate = LocalDate.of(2000, 4, 1);
-
-		Employee emp2 = new Employee();
-		emp2.empId = 2;
-		emp2.empNo = "2";
-		emp2.empNm = "Kobayashi Jiro";
-		emp2.entryDate = LocalDate.of(2001, 4, 1);
-
-		Employee emp3 = new Employee();
-		emp3.empId = 3;
-		emp3.empNo = "3";
-		emp3.empNm = "Kobayashi Saburo";
-		emp3.entryDate = LocalDate.of(2002, 4, 1);
+		Employee emp1 = newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp2 = newEmployee(2, "2", "Kobayashi Jiro", LocalDate.of(2000, 4, 2));
+		Employee emp3 = newEmployee(3, "3", "Kobayashi Saburo", LocalDate.of(2000, 4, 3));
 
 		employees.add(emp3);
 		employees.add(emp1);
@@ -79,6 +92,16 @@ class EmployeeTest {
 		assertTrue(employees.get(1) == emp2);
 		assertTrue(employees.get(2) == emp3);
 
+	}
+
+	// Note:this is not common way to define static factory method in test class
+	private static Employee newEmployee(long empId, String empNo, String empNm, LocalDate entryDate) {
+		Employee emp = new Employee();
+		emp.empId = empId;
+		emp.empNo = empNo;
+		emp.empNm = empNm;
+		emp.entryDate = entryDate;
+		return emp;
 	}
 
 }
