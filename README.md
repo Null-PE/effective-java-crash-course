@@ -5,7 +5,7 @@
 1. clone repository 
 
 ```
-git clone git@github.com:kobain-jp/effective-java-crash-course.git
+git clone https://github.com/kobain-jp/effective-java-crash-course.git
 ```
 
 2. launch eclipse and import project
