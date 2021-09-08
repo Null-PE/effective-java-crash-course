@@ -8,6 +8,13 @@ https://dzone.com/articles/jvm-architecture-explained
 https://gakumon.tech/java/java_thread_jvm.html
 
 https://www.linkedin.com/pulse/static-variables-methods-java-where-jvm-stores-them-kotlin-malisciuc
+
+
+Stack and Heap
+https://www.linkedin.com/pulse/what-where-stack-heap-maxim-malisciuc/
+
+Static Variable and Method
+https://www.linkedin.com/pulse/what-where-stack-heap-maxim-malisciuc/
 ```
 
 Javaの型の分類
