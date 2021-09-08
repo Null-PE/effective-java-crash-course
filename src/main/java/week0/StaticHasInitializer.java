@@ -8,10 +8,8 @@ public class StaticHasInitializer {
 		printStatus();
 	}
 
-	// プリミティブ型 他にはshort, long, float, double, boolean, and char.
 	public static int primitiveTypeVariable = 1;
 
-	// 参照型 プリミティブ型以外の型
 	public static String referenceTypeVariable = new String("default");
 
 	// static initializer2
