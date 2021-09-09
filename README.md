@@ -18,19 +18,24 @@ git clone https://github.com/kobain-jp/effective-java-crash-course.git
 3. Check your setup by lauching junit
 
 ```
-1.select src/test/java/week1/EmployeeTest
-2.right click and run as junit Test
+1.select src/main/java/week0/Experiment1_1.java
+2.right click and run as Java Application
 ```
 
-if junit result shows with red bar, setup is succeeded
+if following shows in console, set up is succeded.
+
+```
+1
+lr
+```
 
 ### Effective Java
 
 ```
-
 Target Sections
 
 Target Sections by week
+week 0 : 1 6
 week 1 : 10 11 12 14 16 17 49 50 58 64
 
 ```
