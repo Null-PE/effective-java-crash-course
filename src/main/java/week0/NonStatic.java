@@ -2,9 +2,9 @@ package week0;
 
 public class NonStatic {
 
-	public int primitiveTypeVariable = 0;
+	public int cp = 0;
 
-	public String referenceTypeVariable = new String("default");
+	public String cr = new String("default");
 
 	public String method1() {
 		System.out.println("nonStaticMethod called");
@@ -13,8 +13,8 @@ public class NonStatic {
 
 	@Override
 	public String toString() {
-		return "NonStatic [referenceTypeVariable=" + referenceTypeVariable + ", primitiveTypeVariable="
-				+ primitiveTypeVariable + "]";
+		return "NonStatic [referenceTypeVariable=" + cr + ", primitiveTypeVariable="
+				+ cp + "]";
 	}
 
 }

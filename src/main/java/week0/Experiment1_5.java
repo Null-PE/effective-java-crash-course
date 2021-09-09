@@ -4,32 +4,32 @@ public class Experiment1_5 {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 
-		long primitive = 1;
-		method1(primitive);
-		System.out.println(primitive);
+		long lp = 1;
+		method1(lp);
+		System.out.println(lp);
 
-		NonStatic reference = new NonStatic();
-		method2(reference);
-		System.out.println(reference);
+		NonStatic lr = new NonStatic();
+		method2(lr);
+		System.out.println(lr);
 
-		method3(reference);
-		System.out.println(reference);
+		method3(lr);
+		System.out.println(lr);
 
 	}
 
-	public static void method1(long val) {
-		val = 2;
+	public static void method1(long mp) {
+		mp = 2;
 	}
 
-	public static void method2(NonStatic nonStatic) {
-		nonStatic.primitiveTypeVariable = 2;
-		nonStatic.referenceTypeVariable = new String("method2");
+	public static void method2(NonStatic mr) {
+		mr.cp = 2;
+		mr.cr = new String("method2");
 	}
 
-	public static void method3(NonStatic nonStatic) {
-		nonStatic = new NonStatic();
-		nonStatic.primitiveTypeVariable = 3;
-		nonStatic.referenceTypeVariable = new String("method3");
+	public static void method3(NonStatic mr) {
+		mr = new NonStatic();
+		mr.cp = 3;
+		mr.cr = new String("method3");
 	}
 
 }

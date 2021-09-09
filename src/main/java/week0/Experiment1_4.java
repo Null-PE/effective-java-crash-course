@@ -6,20 +6,20 @@ public class Experiment1_4 {
 
 		NonStatic n1 = new NonStatic();
 
-		int localPrimitive = n1.primitiveTypeVariable;
-		System.out.println("localPrimitive:" + localPrimitive);
-		n1.primitiveTypeVariable = 1;
+		int lp = n1.cp;
+		System.out.println("lp:" + lp);
+		n1.cp = 1;
 
-		System.out.println("localPrimitive:" + localPrimitive);
-		System.out.println("n1.primitiveTypeVariable:" + n1.primitiveTypeVariable);
+		System.out.println("lp:" + lp);
+		System.out.println("n1.cp:" + n1.cp);
 		System.out.println();
 		
-		String localReference = n1.referenceTypeVariable;
-		System.out.println("localReference:" + localReference);
-		n1.referenceTypeVariable = new String("changed");
+		String lr = n1.cr;
+		System.out.println("lr:" + lr);
+		n1.cr = new String("changed");
 
-		System.out.println("localReference:" + localReference);
-		System.out.println("n1.referenceTypeVariable:" + n1.referenceTypeVariable);
+		System.out.println("lr:" + lr);
+		System.out.println("n1.cr:" + n1.cr);
 	}
 
 }

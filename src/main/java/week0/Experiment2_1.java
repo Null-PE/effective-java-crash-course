@@ -4,15 +4,18 @@ public class Experiment2_1 {
 
 	public static void main(String[] args) {
 
-		String s1 = "あいう";
-		String s2 = "あいう";
+		String lr1 = "あいう";
+		String lr2 = "あいう";
 
-		System.out.println("s1 == s2 :" + (s1 == s2));
-		System.out.println("s1.equals(s2):" + s1.equals(s2));
+		System.out.println("lr1 == lr2 :" + (lr1 == lr2));
+		System.out.println("lr1.equals(lr2):" + lr1.equals(lr2));
 
-		String s3 = new String("あいう");
-		System.out.println("s1 == s3 :" + (s1 == s3));
-		System.out.println("s1.equals(s3):" + s1.equals(s3));
+		String lr3 = new String("あいう");
+		System.out.println("lr1 == lr3 :" + (lr1 == lr3));
+		System.out.println("lr1.equals(lr3):" + lr1.equals(lr3));
 
+		String lr4 = new String("あいう");
+		System.out.println("lr4 == lr3 :" + (lr4 == lr3));
+		System.out.println("lr4.equals(lr3):" + lr4.equals(lr3));
 	}
 }

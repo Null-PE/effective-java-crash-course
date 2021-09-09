@@ -4,11 +4,11 @@ public class Experiment1_1 {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 
-		int localValPrimitive = 1;
-		String localValReference = new String("localval");
+		int lp = 1;
+		String lr = new String("lr");
 
-		System.out.println(localValPrimitive);
-		System.out.println(localValReference);
+		System.out.println(lp);
+		System.out.println(lr);
 
 	}
 
