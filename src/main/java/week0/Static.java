@@ -2,7 +2,7 @@ package week0;
 
 public class Static {
 
-	public static int csp = 1;
+	public static int csp = 0;
 
 	public static String csr = new String("default");
 
