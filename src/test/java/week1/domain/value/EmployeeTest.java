@@ -20,7 +20,7 @@ class EmployeeTest {
 	@Test
 	void testToString() {
 
-		Employee emp = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp = new Employee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 		assertThat(emp.toString(), is("Employee [empId=1, empNo=1, empNm=Kobayashi Taro, entryDate=2000-04-01]"));
 
 	}
@@ -28,8 +28,8 @@ class EmployeeTest {
 	@Test
 	void testEquals_AllFiledsAreSame() {
 
-		Employee emp1 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
-		Employee emp2 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp1 = new Employee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp2 = new Employee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 
 		assertTrue(emp1.equals(emp2));
 
@@ -40,8 +40,8 @@ class EmployeeTest {
 			"1,1,Kobayashi Taro,2001-04-02" })
 	void testEquals_OneOfTheFiledIsNotSame(long empId, String empNo, String empNm, LocalDate entryDate) {
 
-		Employee emp1 = EmployeeTest.newEmployee(empId, empNo, empNm, entryDate);
-		Employee emp2 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp1 = new Employee(empId, empNo, empNm, entryDate);
+		Employee emp2 = new Employee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 
 		assertFalse(emp1.equals(emp2));
 
@@ -50,9 +50,8 @@ class EmployeeTest {
 	@Test
 	void testHashCode_AllFiledsAreSame() {
 		Map<Employee, Long> map = new HashMap<Employee, Long>();
-		Employee emp1 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
-		Employee emp2 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
-
+		Employee emp1 = new Employee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp2 = new Employee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 		map.put(emp1, Long.valueOf(1));
 		assertThat(map.get(emp2), is(Long.valueOf(1)));
 
@@ -64,8 +63,8 @@ class EmployeeTest {
 	void testHashCode_OneOfTheFiledIsNotSame(long empId, String empNo, String empNm, LocalDate entryDate) {
 		Map<Employee, Long> map = new HashMap<Employee, Long>();
 
-		Employee emp1 = EmployeeTest.newEmployee(empId, empNo, empNm, entryDate);
-		Employee emp2 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp1 = new Employee(empId, empNo, empNm, entryDate);
+		Employee emp2 = new Employee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
 
 		map.put(emp1, Long.valueOf(1));
 		assertThat(map.get(emp2), is(Long.valueOf(1)));
@@ -78,30 +77,19 @@ class EmployeeTest {
 
 		List<Employee> employees = new ArrayList<Employee>();
 
-		Employee emp1 = EmployeeTest.newEmployee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
-		Employee emp2 = EmployeeTest.newEmployee(2, "2", "Kobayashi Jiro", LocalDate.of(2000, 4, 2));
-		Employee emp3 = EmployeeTest.newEmployee(3, "3", "Kobayashi Saburo", LocalDate.of(2000, 4, 3));
+		Employee emp1 = new Employee(1, "1", "Kobayashi Taro", LocalDate.of(2000, 4, 1));
+		Employee emp2 = new Employee(2, "2", "Kobayashi Jiro", LocalDate.of(2000, 4, 2));
+		Employee emp3 = new Employee(3, "3", "Kobayashi Saburo", LocalDate.of(2000, 4, 3));
 
 		employees.add(emp3);
 		employees.add(emp1);
 		employees.add(emp2);
 
 		// Collections.sort(employees);
-
 		assertTrue(employees.get(0) == emp1);
 		assertTrue(employees.get(1) == emp2);
 		assertTrue(employees.get(2) == emp3);
 
-	}
-
-	// Note:this is not common way to define static factory method in test class
-	private static Employee newEmployee(long empId, String empNo, String empNm, LocalDate entryDate) {
-		Employee emp = new Employee();
-		emp.empId = empId;
-		emp.empNo = empNo;
-		emp.empNm = empNm;
-		emp.entryDate = entryDate;
-		return emp;
 	}
 
 }
