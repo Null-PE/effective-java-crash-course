@@ -3,7 +3,6 @@ package week1.domain.value;
 import java.time.LocalDate;
 
 //TODO2 省略されている extends句を記載せよ(select Product and right click -> open type hierarchy in eclipse)
-//TODO3 Class名にVo又はEntityのいずれかを追加せよ
 public class Product {
 
 	// TODO1 以下を満たすようにリファクタリングせよ

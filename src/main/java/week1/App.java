@@ -3,24 +3,20 @@ package week1;
 import java.util.Collections;
 import java.util.List;
 
-import week1.domain.repository.MockEmployeeRepository;
-import week1.domain.value.Employee;
+import week1.domain.repository.BookRepository;
+import week1.domain.repository.MockBookRepository;
+import week1.domain.value.Book;
 
 public class App {
 
 	public static void main(String[] args) {
 
-		// TODO8 : Effective Java Item 64
-		MockEmployeeRepository repository = new MockEmployeeRepository();
-		List<Employee> employees = repository.findAll();
+		BookRepository repository = new MockBookRepository();
+		List<Book> books = repository.findAll();
 
-		// remove the comment out after you finish TODO
-		// Collections.sort(employees);
-
-		// TODO9 : Effective Java Item 58
-		for (int i = 0; i < employees.size(); i++) {
-			Employee employee = (Employee) employees.get(i);
-			System.out.println(employee.toString());
+		Collections.sort(books);
+		for (Book book : books) {
+			System.out.println(book);
 		}
 
 	}
