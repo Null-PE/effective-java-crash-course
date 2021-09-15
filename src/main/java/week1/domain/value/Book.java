@@ -1,7 +1,7 @@
 package week1.domain.value;
 
 import java.time.LocalDate;
-import java.util.StringJoiner;
+import java.util.Objects;
 
 public class Book implements Comparable<Book> {
 
@@ -34,10 +34,11 @@ public class Book implements Comparable<Book> {
 	}
 
 	// TODO4 override toString and pass BookTest.testToString (ask help to
-	// eclipse and refactor by using StringJoiner)
+	// eclipse and refactor by using StringJoiner if you could)
 	// Item 12
 
 	// TODO5 override equals and hashCode (ask help to eclipse)
+	// and refactor by using Objects.equals and Objects.hash if you could
 	// Item 10 11
 
 	// TODO6 implements Comparable and pass
