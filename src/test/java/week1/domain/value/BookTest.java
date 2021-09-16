@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.hamcrest.collection.IsIterableContainingInOrder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -91,10 +92,7 @@ class BookTest {
 		books.add(book4);
 
 		Collections.sort(books);
-		assertTrue(books.get(0) == book3);
-		assertTrue(books.get(1) == book4);
-		assertTrue(books.get(2) == book1);
-		assertTrue(books.get(3) == book2);
+		assertThat(books, IsIterableContainingInOrder.contains(book3, book4, book1, book2));
 
 	}
 
