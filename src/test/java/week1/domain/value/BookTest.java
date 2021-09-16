@@ -3,8 +3,6 @@ package week1.domain.value;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -33,7 +32,7 @@ class BookTest {
 		Book book1 = new Book(1, "SLAM DUNK 1", "Takehiko Inoue", LocalDate.of(1991, 2, 8));
 		Book book2 = new Book(1, "SLAM DUNK 1", "Takehiko Inoue", LocalDate.of(1991, 2, 8));
 
-		assertTrue(book1.equals(book2));
+		Assertions.assertTrue(book1.equals(book2));
 
 	}
 
@@ -45,7 +44,7 @@ class BookTest {
 		Book book1 = new Book(bookId, bookNo, bookNm, entryDate);
 		Book book2 = new Book(1, "SLAM DUNK 1", "Takehiko Inoue", LocalDate.of(1991, 2, 8));
 
-		assertFalse(book1.equals(book2));
+		Assertions.assertFalse(book1.equals(book2));
 
 	}
 
@@ -90,10 +89,10 @@ class BookTest {
 		books.add(book2);
 
 		Collections.sort(books);
-		assertTrue(books.get(0) == book3);
-		assertTrue(books.get(1) == book4);
-		assertTrue(books.get(2) == book1);
-		assertTrue(books.get(3) == book2);
+		Assertions.assertTrue(books.get(0) == book3);
+		Assertions.assertTrue(books.get(1) == book4);
+		Assertions.assertTrue(books.get(2) == book1);
+		Assertions.assertTrue(books.get(3) == book2);
 
 	}
 
