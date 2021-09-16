@@ -3,6 +3,8 @@ package week1.domain.value;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -32,7 +34,7 @@ class BookTest {
 		Book book1 = new Book(1, "SLAM DUNK 1", "Takehiko Inoue", LocalDate.of(1991, 2, 8));
 		Book book2 = new Book(1, "SLAM DUNK 1", "Takehiko Inoue", LocalDate.of(1991, 2, 8));
 
-		Assertions.assertTrue(book1.equals(book2));
+		assertTrue(book1.equals(book2));
 
 	}
 
@@ -44,7 +46,7 @@ class BookTest {
 		Book book1 = new Book(bookId, bookNo, bookNm, entryDate);
 		Book book2 = new Book(1, "SLAM DUNK 1", "Takehiko Inoue", LocalDate.of(1991, 2, 8));
 
-		Assertions.assertFalse(book1.equals(book2));
+		assertFalse(book1.equals(book2));
 
 	}
 
@@ -83,16 +85,16 @@ class BookTest {
 		Book book3 = new Book(3, "DRAGON BALL 1", "Akira Toriyama", LocalDate.of(1985, 9, 10));
 		Book book4 = new Book(4, "DRAGON BALL 2", "Akira Toriyama", LocalDate.of(1986, 1, 10));
 
-		books.add(book3);
-		books.add(book4);
 		books.add(book1);
 		books.add(book2);
+		books.add(book3);
+		books.add(book4);
 
 		Collections.sort(books);
-		Assertions.assertTrue(books.get(0) == book3);
-		Assertions.assertTrue(books.get(1) == book4);
-		Assertions.assertTrue(books.get(2) == book1);
-		Assertions.assertTrue(books.get(3) == book2);
+		assertTrue(books.get(0) == book3);
+		assertTrue(books.get(1) == book4);
+		assertTrue(books.get(2) == book1);
+		assertTrue(books.get(3) == book2);
 
 	}
 
