@@ -85,10 +85,10 @@ class BookTest {
 		Book book3 = new Book(3, "DRAGON BALL 1", "Akira Toriyama", LocalDate.of(1985, 9, 10));
 		Book book4 = new Book(4, "DRAGON BALL 2", "Akira Toriyama", LocalDate.of(1986, 1, 10));
 
-		books.add(book1);
-		books.add(book2);
-		books.add(book3);
 		books.add(book4);
+		books.add(book2);
+		books.add(book1);
+		books.add(book3);
 
 		Collections.sort(books);
 		assertThat(books, IsIterableContainingInOrder.contains(book3, book4, book1, book2));
