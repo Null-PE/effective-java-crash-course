@@ -8,11 +8,17 @@ public class ProductApp {
 
 		Product product = new Product();
 
-		// Objectを継承することで利用できるメソッド
+		// オーバーライド不要
+		// クラス名を出力、リフレクションなどで利用する
 		System.out.println("product.getClass():" + product.getClass());
+		
+		// オーバーライドが必要なもの
+		// フィールド名と値を文字列としてつなげて文字列として返すもの
 		System.out.println("product.toString():" + product.toString());
-		// == と equalsの違いは何か
+		// オブジェクトの等価性をチェックするメソッド
+		// オブジェクト型の == は参照値が同じかを確認している
 		System.out.println(product.equals(new Product()));
+		// HashMap,HashSetクラスを利用するために独自実装が必要
 		System.out.println("product.hashCode():" + product.hashCode());
 
 		// 以下はマルチスレッドプログラミングの際に利用するので今回は省略

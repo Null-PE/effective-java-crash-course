@@ -7,7 +7,7 @@ import week1.domain.repository.BookRepository;
 import week1.domain.repository.MockBookRepository;
 import week1.domain.value.Book;
 
-public class App {
+public class BookApp {
 
 	public static void main(String[] args) {
 
