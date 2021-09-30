@@ -14,7 +14,7 @@ public class EqualsExperiment {
 		// == はオブジェクト型は参照値比較
 		System.out.println("track1 == track2:" + (track1 == track2));
 		// .equalsはフィールドの値が全て等しいかを
-		// TODO4: override equals of Track to make the followings true
+		// TODO 4: override equals of Track to make the followings true
 		System.out.println("track1 == track2:" + (track1.equals(track2)));
 
 	}
