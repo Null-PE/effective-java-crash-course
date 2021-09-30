@@ -1,15 +1,13 @@
 package week2;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class ForExperiment {
 
 	public static String run() {
 
-		List<List> outer = new ArrayList<List>();
+		List<List<String>> outer = new ArrayList<List<String>>();
 
 		List<String> inner1 = new ArrayList<String>();
 		inner1.add("i1-1");

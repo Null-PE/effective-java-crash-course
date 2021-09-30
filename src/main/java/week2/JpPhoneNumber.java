@@ -8,7 +8,7 @@ public class JpPhoneNumber implements Comparable<JpPhoneNumber> {
 	private String cityCode; // 市内局番 1 to 4 digets
 	private String subscriberNumber; // 4 digets
 
-	// todo 5 implement static factory method
+	// todo 5 change visibility for static factory method
 	public JpPhoneNumber(String areaCodeWithZeroPrefix, String cityCode, String subscriberNumber) {
 		this.areaCodeWithZeroPrefix = areaCodeWithZeroPrefix;
 		this.cityCode = cityCode;
