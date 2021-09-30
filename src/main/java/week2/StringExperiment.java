@@ -8,7 +8,7 @@ public class StringExperiment {
 
 		long startTimeMills = System.currentTimeMillis();
 
-		//TODO2 improve speed and memory usage
+		//TODO 2 improve speed and memory usage
 		String str = "";
 		for (int i = 0; i < 100000; i++) {
 			str = str + new String("あ");

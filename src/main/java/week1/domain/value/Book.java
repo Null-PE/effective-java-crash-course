@@ -35,11 +35,11 @@ public class Book implements Comparable<Book> {
 	
 	@Override 
 	public String toString() {
-		// TODO6 use MoreObjects.ToStringHelper to refactor the code
+		// TODO 6 use MoreObjects.ToStringHelper to refactor the code
 		return "Book [id=" + id + ", title=" + title + ", author=" + author + ", releaseDate=" + releaseDate + "]";
 	}
 
-	// TODO7 
+	// TODO 7
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -50,7 +50,7 @@ public class Book implements Comparable<Book> {
 			return false;
 		Book other = (Book) obj;
 		
-		// TODO7
+		// TODO 7
 		// use Objects.equals to refactor the code
 		if (author == null) {
 			if (other.author != null)
@@ -72,7 +72,7 @@ public class Book implements Comparable<Book> {
 		return true;
 	}
 
-	// TODO8:
+	// TODO 8:
 	// level1: use Objects.hash to refactor it.
 	// level2: improve the performance(hint:this class is immutable)
 	@Override
@@ -86,7 +86,7 @@ public class Book implements Comparable<Book> {
 		return result;
 	}
 
-	// TODO9: author > title
+	// TODO 9: author > title
 	@Override
 	public int compareTo(Book o) {
 		return 0;

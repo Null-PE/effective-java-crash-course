@@ -21,7 +21,7 @@ public class ForExperiment {
 
 		outer.add(inner2);
 
-		// TODO1 fix bugs and refactor by using foreach(拡張）
+		// TODO 1 fix bugs and refactor by using foreach(拡張）
 		// Item58
 		for (int i = 0; i < outer.size(); i++) {
 

@@ -20,7 +20,7 @@ public class HashCodeExperiment {
 
 		// 別のロジックで対象のユーザの判定がどうだったかを確認する。
 		Boolean result = cacheResults.getOrDefault(new CacheKey(1, 1), Boolean.valueOf(false));
-		// TODO4 trueが出力されるように修正する。
+		// TODO 4 trueが出力されるように修正する。
 		System.out.println(result);
 	}
 
