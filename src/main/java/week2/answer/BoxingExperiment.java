@@ -1,10 +1,9 @@
-package week2;
+package week2.answer;
 
 public class BoxingExperiment {
 
-	//TODO 3 improve speed and memory usage
 	public static Long run() {
-		Long sum = 0L;
+		long sum = 0L;
 		for (long i = 0; i < Integer.MAX_VALUE; i++) {
 			sum += i;
 		}
