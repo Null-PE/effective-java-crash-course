@@ -6,7 +6,7 @@ public class TypeExperiment {
 
 	public static void main(String[] args) {
 
-		// TODO 2 
+		// TODO 2 ITEM 64
 		// change HashMap -> ConcurrentHashMap 
 		// change code for Map to be implemented in the future.
 		HashMap<String, Object> map = new HashMap<String, Object>();
