@@ -21,18 +21,6 @@ public class JpPhoneNumber implements Comparable<JpPhoneNumber> {
 		this.subscriberNumber = subscriberNumber;
 	}
 
-	public String getAreaCodeWithZeroPrefix() {
-		return areaCodeWithZeroPrefix;
-	}
-
-	public String getCityCode() {
-		return cityCode;
-	}
-
-	public String getSubscriberNumber() {
-		return subscriberNumber;
-	}
-
 	public static JpPhoneNumber parse(String jpPhoneNumber) {
 
 		Objects.requireNonNull(jpPhoneNumber);
@@ -51,7 +39,19 @@ public class JpPhoneNumber implements Comparable<JpPhoneNumber> {
 		Objects.requireNonNull(subscriberNumber);
 		String.join("-", new String[] { areaCodeWithZeroPrefix, cityCode, subscriberNumber });
 		return parse(areaCodeWithZeroPrefix + "-" + cityCode + "-" + subscriberNumber);
-		
+
+	}
+
+	public String getAreaCodeWithZeroPrefix() {
+		return areaCodeWithZeroPrefix;
+	}
+
+	public String getCityCode() {
+		return cityCode;
+	}
+
+	public String getSubscriberNumber() {
+		return subscriberNumber;
 	}
 
 	@Override
