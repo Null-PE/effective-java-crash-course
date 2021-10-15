@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class RegexExperiment {
 
-	public static final Pattern PATTERN_JP_PHONE_NUMBER = Pattern.compile("\"0\\\\d{1,4}-\\\\d{1,4}-\\\\d{4}\"");
+	public static final Pattern PATTERN_JP_PHONE_NUMBER = Pattern.compile("0\\d{1,3}-\\d{1,4}-\\d{4}");
 
 	public static void run() {
 
