@@ -8,10 +8,10 @@ import com.google.common.base.Strings;
 
 public final class BookAnswer implements Comparable<BookAnswer> {
 
-	private long id;
-	private String title;
-	private String author;
-	private LocalDate releaseDate;
+	private final long id;
+	private final String title;
+	private final String author;
+	private final LocalDate releaseDate;
 
 	private int hashCode; // 0 is default value
 
@@ -93,7 +93,7 @@ public final class BookAnswer implements Comparable<BookAnswer> {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		
+
 		return equalTo((BookAnswer) obj);
 	}
 

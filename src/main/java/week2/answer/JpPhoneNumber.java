@@ -9,9 +9,9 @@ public class JpPhoneNumber implements Comparable<JpPhoneNumber> {
 
 	public static final Pattern PATTERN_JP_PHONE_NUMBER = Pattern.compile("0\\d{1,3}-\\d{1,4}-\\d{4}");
 
-	private String areaCodeWithZeroPrefix; // 0 + 市外局番 1 to 3 digets https://www.soumu.go.jp/main_content/000141817.pdf
-	private String cityCode; // 市内局番 1 to 4 digets
-	private String subscriberNumber; // 4 digets
+	private final String areaCodeWithZeroPrefix; // 0 + 市外局番 1 to 3 digets https://www.soumu.go.jp/main_content/000141817.pdf
+	private final String cityCode; // 市内局番 1 to 4 digets
+	private final String subscriberNumber; // 4 digets
 
 	private int hashCode = 0;
 
