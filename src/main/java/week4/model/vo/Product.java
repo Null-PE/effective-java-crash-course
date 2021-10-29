@@ -4,14 +4,15 @@ import java.util.Objects;
 
 import com.google.common.base.MoreObjects;
 
+// TODO 0 ITEM 17 不変オブジェクトに変更する
 public class Product {
 
-	// TODO 1 change to Enum 
+	// TODO 1 ITEM 34 change to Enum 
 	public static int NEW = 1;
 	public static int USED = 2;
 	public static int VINTAGE = 3;
 
-	// TODO 2 change to Enum
+	// TODO 2 ITEM 34 change to Enum
 	public static int MINT = 1;
 	public static int GOOD = 2;
 	public static int FAIR = 3;
@@ -102,6 +103,26 @@ public class Product {
 				&& Objects.equals(name, another.getName()) && Objects.equals(price, another.getPrice())
 				&& Objects.equals(conditionCategory, another.getConditionCategory())
 				&& Objects.equals(conditionRate, another.getConditionRate());
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public void setConditionCategory(int conditionCategory) {
+		this.conditionCategory = conditionCategory;
+	}
+
+	public void setConditionRate(int conditionRate) {
+		this.conditionRate = conditionRate;
 	}
 
 }
