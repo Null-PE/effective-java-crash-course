@@ -1,6 +1,6 @@
 package week4.action;
 
-import week4.model.dao.ProductDao;
+import week4.model.dao.ProductDaoAnswer;
 import week4.model.vo.Product;
 import week4.model.vo.ProductAnswer;
 import week4.model.vo.ProductAnswer.ConditionCategory;
@@ -11,7 +11,7 @@ public class AddActionAnswer {
 	public void execute(String name, int price, ConditionCategory conditionCategory, ConditionRate conditionRate) {
 
 		ProductAnswer product = new ProductAnswer(Product.DEFAULT_ID, name, price, conditionCategory, conditionRate);
-		new ProductDao().insert(product);
+		new ProductDaoAnswer().insert(product);
 
 	}
 

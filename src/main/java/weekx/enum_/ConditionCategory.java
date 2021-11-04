@@ -17,7 +17,7 @@ public enum ConditionCategory {
 	}
 
 	// 既存の値との互換せいのために逆引きを用意するパターン
-	public static ConditionCategory fromInt(int id) {
+	public static ConditionCategory of(int id) {
 		for (ConditionCategory type : values()) {
 			if (type.getId() == id) {
 				return type;
