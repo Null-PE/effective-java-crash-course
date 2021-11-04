@@ -14,9 +14,12 @@ public class App {
 		String name = args[1];
 		int price = Integer.valueOf(args[2]);
 		// TODO 2 convert int to Enum
+		// ConditionCategory conditionCategory = TODO;
 		int conditionCategory = Integer.valueOf(args[3]);
+		
 		// TODO 2 convert int to Enum
 		int conditionRate = Integer.valueOf(args[4]);
+		// conditionRate conditionRate = TODO;
 
 		if (command.equalsIgnoreCase(ADD)) {
 			new AddAction().execute(name, price, conditionCategory, conditionRate);
