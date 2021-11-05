@@ -59,7 +59,7 @@ public class Main {
 
 		try {
 			// int enum
-			ConditionCategory.of(4);
+			ConditionCategory.fromInt(4);
 			// そもそも書けない
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
