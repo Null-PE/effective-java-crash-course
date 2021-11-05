@@ -87,7 +87,7 @@ public final class ProductAnswer {
 
 	public enum ConditionCategory {
 
-		NEW(0), OLD(1), VINTAGE(2);
+		NEW(1), OLD(2), VINTAGE(3);
 
 		private final int id;
 
@@ -106,7 +106,7 @@ public final class ProductAnswer {
 					return type;
 				}
 			}
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("id must be 1, 2 or 3");
 		}
 
 	}
@@ -128,7 +128,7 @@ public final class ProductAnswer {
 		public static ConditionRate of(int id) {
 
 			return Arrays.stream(values()).filter(e -> e.getId() == id).findFirst()
-					.orElseThrow(() -> new IllegalArgumentException());
+					.orElseThrow(() -> new IllegalArgumentException("id must be 1, 2, 3 or 4"));
 
 		}
 
