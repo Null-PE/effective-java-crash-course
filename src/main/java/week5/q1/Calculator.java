@@ -15,7 +15,7 @@ public class Calculator {
 		}
 		throw new IllegalArgumentException("Unsupported Commnad");
 		
-		//TODO 1　implemnt the following and replace with the above
+		//TODO 1　implemnt the followings and replace the above with it
 		//Command command = Command.valueOf(commandStr.toUpperCase());
 		//return command.execute(x,y);
 		
