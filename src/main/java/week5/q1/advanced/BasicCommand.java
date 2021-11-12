@@ -1,0 +1,30 @@
+package week5.q1.advanced;
+
+public enum BasicCommand implements Command {
+
+	PLUS {
+		@Override
+		public int execute(int x, int y) {
+			return x + y;
+		}
+	},
+	MINUS {
+		@Override
+		public int execute(int x, int y) {
+			return x - y;
+		}
+	},
+	TIMES {
+		@Override
+		public int execute(int x, int y) {
+			return x * y;
+		}
+	},
+	DIVIDE {
+		@Override
+		public int execute(int x, int y) {
+			return x / y;
+		}
+	};
+
+}
