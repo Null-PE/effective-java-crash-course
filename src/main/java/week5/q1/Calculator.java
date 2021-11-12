@@ -4,19 +4,21 @@ public class Calculator {
 
 	public static int calculate(String commandStr, int x, int y) {
 
-		//TODO 1
-		//Command command = Command.valueOf(commandStr.toUpperCase());
-		//return command.execute(x,y);
+		Command command = Command.valueOf(commandStr.toUpperCase());
 
-		if ("PLUS".equalsIgnoreCase(commandStr)) {
+		// TODO 1 refactor the following code as `return command.execute(x,y)`;
+		switch (command) {
+		case PLUS:
 			return x + y;
-		} else if ("MINUS".equalsIgnoreCase(commandStr)) {
+		case MINUS:
 			return x - y;
-		} else if ("TIMES".equalsIgnoreCase(commandStr)) {
+		case TIMES:
 			return x * y;
-		} else if ("DIVIDE".equalsIgnoreCase(commandStr)) {
+		case DIVIDE:
 			return x / y;
+		default:
+			throw new IllegalArgumentException("Unsupported Commnad");
 		}
-		throw new IllegalArgumentException("Unsupported Commnad");
+
 	}
 }
