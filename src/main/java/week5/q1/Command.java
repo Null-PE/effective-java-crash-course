@@ -4,10 +4,8 @@ public enum Command {
 
 	PLUS, MINUS, TIMES, DIVIDE;
 	
-	
-	
 	//TODO 1 implement
-	//public abstract double execute(int x,int y);
+	//public abstract int execute(int x,int y);
 	
 
 }
