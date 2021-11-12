@@ -23,7 +23,7 @@ class CalculatorTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"MULTIPLY", "multiply"})
+    @ValueSource(strings = {"TIMES", "times"})
     void multi(String command) {
         assertThat(Calculator.createFomulaWithAnswer(command, 2.4f, 1.2f), is("2.4 * 1.2 = 2.9"));
     }

@@ -4,13 +4,29 @@ public enum CommandAnswer {
 
 	PLUS {
 		@Override
-		public double execute(int x, int y) {
+		public int execute(int x, int y) {
 			return x + y;
 		}
+	},
+	MINUS {
+		@Override
+		public int execute(int x, int y) {
+			return x - y;
+		}
+	},
+	TIMES {
+		@Override
+		public int execute(int x, int y) {
+			return x * y;
+		}
+	},
+	DIVIDE {
+		@Override
+		public int execute(int x, int y) {
+			return x / y;
+		}
 	};
-	// TODO implement
-	//MINUS, TIMES, DIVIDE;
 
-	public abstract double execute(int x, int y);
+	public abstract int execute(int x, int y);
 
 }

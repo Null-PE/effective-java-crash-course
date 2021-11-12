@@ -14,7 +14,7 @@ public class Calculator {
 			return String.format(FORMAT_FORMULA, x, "+", y, x + y);
 		} else if ("MINUS".equalsIgnoreCase(commandStr)) {
 			return String.format(FORMAT_FORMULA, x, "-", y, x - y);
-		} else if ("MULTIPLY".equalsIgnoreCase(commandStr)) {
+		} else if ("TIMES".equalsIgnoreCase(commandStr)) {
 			return String.format(FORMAT_FORMULA, x, "*", y, x * y);
 		} else if ("DIVIDE".equalsIgnoreCase(commandStr)) {
 			return String.format(FORMAT_FORMULA, x, "/", y, x / y);
