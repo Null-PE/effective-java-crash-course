@@ -1,6 +1,6 @@
-package week6;
+package week6.nutritionfacts;
 
-public class NutritionFacts_TeleScoping {
+public class NutritionFacts_1_TeleScoping {
 
 	private final int servingSize; // 1個分の分量 mL required
 	private final int servings; // 1箱あたり何個 required
@@ -10,12 +10,12 @@ public class NutritionFacts_TeleScoping {
 	private final int carbohydrate; // 1個分の糖質 optional
 
 	// only required
-	public NutritionFacts_TeleScoping(int servingSize, int servings) {
+	public NutritionFacts_1_TeleScoping(int servingSize, int servings) {
 		this(servingSize, servings, 0, 0, 0, 0);
 	}
 
 	// required and optional
-	public NutritionFacts_TeleScoping(int servingSize, int servings, int calories, int fat, int sodium,
+	public NutritionFacts_1_TeleScoping(int servingSize, int servings, int calories, int fat, int sodium,
 			int carbohydrate) {
 
 		this.servingSize = servingSize;
