@@ -3,8 +3,8 @@ package week6.customer;
 public class Customer_1_Telescoping {
 
 	// required
-	private int id;
 	private String name;
+	private String email;
 
 	// optional
 	private int age;
@@ -15,8 +15,5 @@ public class Customer_1_Telescoping {
 	private int waist;
 	private int hip;
 	private int footSize;
-	
-	
-	
 
 }
