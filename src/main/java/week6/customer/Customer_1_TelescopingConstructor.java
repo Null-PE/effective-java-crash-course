@@ -1,6 +1,6 @@
 package week6.customer;
 
-public class Customer_1_Telescoping {
+public class Customer_1_TelescopingConstructor {
 
 	// required
 	private String name;

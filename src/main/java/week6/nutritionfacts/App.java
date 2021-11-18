@@ -13,7 +13,7 @@ public class App {
 		// ×:可読性:書く時も読むときも何番目がどの引数かがわかりにくい
 		// ○:安全性:requiredを強制できる
 		// ○:安全性:不変オブジェクトにできる
-		NutritionFacts_1_TeleScoping eightBottolesOfCoke = new NutritionFacts_1_TeleScoping(240, 8, 0, 0, 0, 0);
+		NutritionFacts_1_TelescopingConstructor eightBottolesOfCoke = new NutritionFacts_1_TelescopingConstructor(240, 8, 0, 0, 0, 0);
 
 		// JavaBeanパターン1
 		// ○:可読性:何をセットしているかがわかりやすい
