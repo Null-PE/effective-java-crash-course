@@ -7,13 +7,11 @@ public class Customer_1_TelescopingConstructor {
 	private String email;
 
 	// optional
-	private int age;
 	private int height;
 	private int wight;
 	private int shoulder;
 	private int bust;
 	private int waist;
 	private int hip;
-	private int footSize;
 
 }
