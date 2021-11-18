@@ -2,12 +2,15 @@ package week6.nutritionfacts;
 
 public class NutritionFacts_3_JavaBean_Required {
 
-	private int servingSize; // 1個分の分量 mL required
-	private int servings; // 1箱あたり何個 required
-	private int calories; // 1個分のカロリー optional
-	private int fat; // 1個分の脂肪　optional
-	private int sodium; // 1個分の塩分 optional
-	private int carbohydrate; // 1個分の糖質 optional
+	// require
+	private int servingSize; // 1個分の分量
+	private int servings; // 1パッケージあたり何個
+
+	// optional
+	private int calories; // 1個分のカロリー
+	private int fat; // 1個分の脂肪
+	private int sodium; // 1個分の塩分
+	private int carbohydrate; // 1個分の糖質
 
 	public NutritionFacts_3_JavaBean_Required(int servingSize, int servings) {
 		this.servingSize = servingSize;
