@@ -3,8 +3,8 @@ package week6.customer;
 public class Customer_3_JavaBean_Required_Constructor {
 
 	// required
-	private int id;
 	private String name;
+	private String email;
 
 	// optional
 	private int age;
