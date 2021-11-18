@@ -26,4 +26,9 @@ public enum ConditionCategory {
 		throw new IllegalArgumentException("id should be 0, 1 or 2");// nullは返さない
 	}
 
+	public static ConditionCategory fromInt(int id) {
+		// TODO 実装必要
+		throw new IllegalArgumentException("未実装");
+	}
+
 }
