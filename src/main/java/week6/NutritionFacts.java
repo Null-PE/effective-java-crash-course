@@ -10,5 +10,6 @@ public class NutritionFacts {
 	private int carbohydrate; // optional
 	
 	// TODO implement this class by using builder pattern
+	// Effective Java item2
 
 }
