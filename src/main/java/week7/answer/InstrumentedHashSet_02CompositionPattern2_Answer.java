@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class InstrumentedHashSet_02CompositePattern2_Answer<E> implements Set<E> {
+public class InstrumentedHashSet_02CompositionPattern2_Answer<E> implements Set<E> {
 
 	private int addCount = 0;
 
