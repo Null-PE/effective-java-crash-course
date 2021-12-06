@@ -7,11 +7,11 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-class InstrumentedHashSet_01ExtendedPatternTest {
+class InstrumentedHashSet_02CompositionPatternTest {
 
 	@Test
 	void testAdd() {
-		InstrumentedHashSet_01ExtendedPattern<String> set = new InstrumentedHashSet_01ExtendedPattern<String>();
+		InstrumentedHashSet_02CompositionPattern<String> set = new InstrumentedHashSet_02CompositionPattern<String>();
 		set.add("A");
 		set.add("A");
 		set.add("A");
@@ -21,7 +21,7 @@ class InstrumentedHashSet_01ExtendedPatternTest {
 
 	@Test
 	void testAddAll() {
-		InstrumentedHashSet_01ExtendedPattern<String> set = new InstrumentedHashSet_01ExtendedPattern<String>();
+		InstrumentedHashSet_02CompositionPattern<String> set = new InstrumentedHashSet_02CompositionPattern<String>();
 		set.addAll(Arrays.asList("A","B","C"));
 		assertThat(set.getAddCount(), is(3));
 	}

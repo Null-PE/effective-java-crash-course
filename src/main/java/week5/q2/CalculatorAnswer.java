@@ -7,7 +7,7 @@ public class CalculatorAnswer {
 	public static String createFomulaWithAnswer(String commandStr, double x, double y) {
 
 		CommandAnswer command = CommandAnswer.valueOf(commandStr.toUpperCase());
-		return String.format(FORMAT_FORMULA, x, command.getSynbol(), y, command.execute(x, y));
+		return String.format(FORMAT_FORMULA, x, command.getSynbol(), y, command.execute(x,y));
 
 	}
 }

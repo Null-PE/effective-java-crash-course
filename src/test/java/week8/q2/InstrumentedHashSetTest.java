@@ -1,4 +1,4 @@
-package week7;
+package week8.q2;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -7,11 +7,12 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-class InstrumentedHashSet_01ExtendedPatternTest {
+
+class InstrumentedHashSetTest {
 
 	@Test
 	void testAdd() {
-		InstrumentedHashSet_01ExtendedPattern<String> set = new InstrumentedHashSet_01ExtendedPattern<String>();
+		InstrumentedHashSet<String> set = new InstrumentedHashSet<String>();
 		set.add("A");
 		set.add("A");
 		set.add("A");
@@ -21,9 +22,8 @@ class InstrumentedHashSet_01ExtendedPatternTest {
 
 	@Test
 	void testAddAll() {
-		InstrumentedHashSet_01ExtendedPattern<String> set = new InstrumentedHashSet_01ExtendedPattern<String>();
-		set.addAll(Arrays.asList("A","B","C"));
+		InstrumentedHashSet<String> set = new InstrumentedHashSet<String>();
+		set.addAll(Arrays.asList("A", "B", "C"));
 		assertThat(set.getAddCount(), is(3));
 	}
-
 }
