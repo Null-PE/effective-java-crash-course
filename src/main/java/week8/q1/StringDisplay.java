@@ -25,7 +25,7 @@ public class StringDisplay {
 	}
 
 	public String createInnerElement() {
-		return ("|" + string + "|");
+		return ("|" + string + "|" + System.lineSeparator());
 	}
 
 	public String createLastElement() {
@@ -40,6 +40,7 @@ public class StringDisplay {
 			sb.append("-");
 		}
 		sb.append("*");
+		sb.append(System.lineSeparator());
 		return sb.toString();
 	}
 

@@ -19,6 +19,8 @@ public class App {
 
 	// TODO refactor this method after refactor CharDisplay and StringDisplay
 	// 同一視
+	
+	// TODO
 	private static String display(List<Object> displays) {
 
 		StringBuilder sb = new StringBuilder();
