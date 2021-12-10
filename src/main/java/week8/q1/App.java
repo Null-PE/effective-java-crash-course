@@ -13,11 +13,13 @@ public class App {
 	private static List<Object> createDisplays() {
 		List<Object> displays = new ArrayList<Object>();
 		displays.add(new CharDisplay('h'));
+		// TODO 2 add Separator use Adapter pattern
+		// displays.add(new Separator());
 		displays.add(new StringDisplay("String"));
 		return displays;
 	}
 
-	// TODO refactor this method after refactor CharDisplay and StringDisplay
+	// TODO 1 refactor this method after refactor CharDisplay and StringDisplay
 	// 同一視
 	
 	// TODO
@@ -30,7 +32,7 @@ public class App {
 				sb.append(((CharDisplay) object).createDisplayString());
 			} else if (object instanceof StringDisplay) {
 				sb.append(((StringDisplay) object).createDisplayString());
-			}
+			} 
 			
 			sb.append(System.lineSeparator());
 		}
