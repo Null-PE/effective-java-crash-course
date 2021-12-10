@@ -1,6 +1,6 @@
-package week8.q1.answer2;
+package week9.q1.answer;
 
-public class StringDisplay extends AbstractDisplay {
+public class StringDisplay extends AbstractDisplay implements Display {
 
 	private String string;
 	private int width;
@@ -17,7 +17,7 @@ public class StringDisplay extends AbstractDisplay {
 
 	@Override
 	protected String createInnerElement() {
-		return ("|" + string + "|");
+		return ("|" + string + "|") + System.lineSeparator();
 	}
 
 	@Override
@@ -33,6 +33,7 @@ public class StringDisplay extends AbstractDisplay {
 			sb.append("-");
 		}
 		sb.append("*");
+		sb.append(System.lineSeparator());
 		return sb.toString();
 	}
 

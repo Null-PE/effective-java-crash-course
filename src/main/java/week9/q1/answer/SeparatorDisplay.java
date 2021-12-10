@@ -1,4 +1,4 @@
-package week8.q1.answer2;
+package week9.q1.answer;
 
 public class SeparatorDisplay implements Display {
 
@@ -6,7 +6,7 @@ public class SeparatorDisplay implements Display {
 
 	@Override
 	public String createDisplayString() {
-		return separator.createSeparator();
+		return separator.createSeparator() + System.lineSeparator();
 	}
 
 }

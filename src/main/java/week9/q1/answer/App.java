@@ -1,4 +1,4 @@
-package week8.q1.answer;
+package week9.q1.answer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,21 +6,22 @@ import java.util.List;
 public class App {
 
 	public static void main(String[] args) {
-		List<AbstractDisplay> displays = createDisplays();
+		List<Display> displays = createDisplays();
 		System.out.println(display(displays));
 	}
 
-	private static List<AbstractDisplay> createDisplays() {
-		List<AbstractDisplay> displays = new ArrayList<AbstractDisplay>();
+	private static List<Display> createDisplays() {
+		List<Display> displays = new ArrayList<Display>();
 		displays.add(new CharDisplay('h'));
+		displays.add(new SeparatorDisplay());
 		displays.add(new StringDisplay("String"));
 		return displays;
 	}
 
-	private static String display(List<AbstractDisplay> displays) {
+	private static String display(List<Display> displays) {
 
 		StringBuilder sb = new StringBuilder();
-		for (AbstractDisplay display : displays) {
+		for (Display display : displays) {
 			sb.append(display.createDisplayString());
 		}
 		return sb.toString();

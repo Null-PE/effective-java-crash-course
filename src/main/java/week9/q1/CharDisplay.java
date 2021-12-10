@@ -1,4 +1,4 @@
-package week8.q1.answer2;
+package week9.q1;
 
 public class CharDisplay extends AbstractDisplay {
 
@@ -20,7 +20,7 @@ public class CharDisplay extends AbstractDisplay {
 
 	@Override
 	protected String createLastElement() {
-		return ">>";
+		return ">>" + System.lineSeparator();
 	}
 
 }

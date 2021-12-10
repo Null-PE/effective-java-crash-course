@@ -1,7 +1,7 @@
-package week9.q1;
+package week9.q2;
 
 // TODO create abstract class or interface and refactor this class;
-public class Figure_Before {
+public class Figure {
 
 	enum Shape {
 		RECTANGLE, CIRCLE
@@ -15,19 +15,19 @@ public class Figure_Before {
 	double radius;
 
 	// constructor for circle
-	Figure_Before(double radius) {
+	Figure(double radius) {
 		shape = Shape.CIRCLE;
 		this.radius = radius;
 	}
 
 	// constructor for rectangle
-	Figure_Before(double length, double width) {
-		this.shape = Shape.CIRCLE;
+	Figure(double length, double width) {
+		this.shape = Shape.RECTANGLE;
 		this.length = length;
 		this.width = width;
 	}
 
-	double area() {
+	public double area() {
 		switch (shape) {
 		case RECTANGLE:
 			return length * width;
