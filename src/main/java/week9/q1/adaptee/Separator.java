@@ -1,4 +1,4 @@
-package week9.q1;
+package week9.q1.adaptee;
 
 public class Separator {
 
