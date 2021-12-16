@@ -7,7 +7,7 @@ public class SeparatorDisplay extends Separator implements Display {
 
 	@Override
 	public String createDisplayString() {
-		return createDisplayString() + System.lineSeparator();
+		return createSeparator() + System.lineSeparator();
 	}
 
 }
