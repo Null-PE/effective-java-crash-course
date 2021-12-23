@@ -28,7 +28,7 @@ public class CharDisplay {
 	}
 
 	public String createLastElement() {
-		return ">>";
+		return ">>" + System.lineSeparator();
 	}
 
 }

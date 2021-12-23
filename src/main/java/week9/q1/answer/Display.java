@@ -1,4 +1,4 @@
-package week8.q1.answer2;
+package week9.q1.answer;
 
 public interface Display {
 

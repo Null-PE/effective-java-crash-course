@@ -10,8 +10,12 @@ class StringDisplayTest {
 	@Test
 	void test() {
 		StringDisplay stringDisplay = new StringDisplay("Hello");
-		assertThat(stringDisplay.createDisplayString(), is("*-----*|Hello||Hello||Hello||Hello||Hello|*-----*"));
-		
+		assertThat(stringDisplay.createDisplayString(),
+				is("*-----*" + System.lineSeparator() + "|Hello|" + System.lineSeparator() + "|Hello|"
+						+ System.lineSeparator() + "|Hello|" + System.lineSeparator() + "|Hello|"
+						+ System.lineSeparator() + "|Hello|" + System.lineSeparator() + "*-----*"
+						+ System.lineSeparator()));
+
 	}
 
 }

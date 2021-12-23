@@ -1,4 +1,4 @@
-package week8.q1.answer;
+package week9.q1;
 
 public class StringDisplay extends AbstractDisplay {
 
@@ -11,17 +11,17 @@ public class StringDisplay extends AbstractDisplay {
 	}
 
 	@Override
-	protected String createFirstElement() {
+	public String createFirstElement() {
 		return createLine();
 	}
 
 	@Override
-	protected String createInnerElement() {
-		return ("|" + string + "|") + System.lineSeparator();
+	public String createInnerElement() {
+		return ("|" + string + "|" + System.lineSeparator());
 	}
 
 	@Override
-	protected String createLastElement() {
+	public String createLastElement() {
 		return createLine();
 	}
 
