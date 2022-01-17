@@ -7,7 +7,7 @@ public class StringUtils {
 
 	// APIとしどちらがいいだろう？ ITEM70
 	// TODO javadocを書こう ITEM74
-	public String capitalizeOrThrowsException(String str) {
+	public static String capitalizeOrThrowsException(String str) {
 
 		Objects.requireNonNull(str);
 		if (str.length() == 0) {
@@ -18,7 +18,7 @@ public class StringUtils {
 
 	}
 
-	public String capitalizeOrNull(String str) {
+	public static String capitalizeOrNull(String str) {
 
 		if (str == null || str.length() == 0) {
 			return str;
@@ -28,7 +28,7 @@ public class StringUtils {
 
 	}
 
-	public Optional<String> capitalizeOptional(String str) {
+	public static Optional<String> capitalizeOptional(String str) {
 
 		if (str == null || str.length() == 0) {
 			return Optional.empty();
